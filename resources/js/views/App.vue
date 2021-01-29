@@ -19,9 +19,9 @@
             <v-container>
                 <v-row>
                     <v-col
-                        v-for="n in 24"
+                        v-for="n in 6"
                         :key="n"
-                        cols="4"
+                        :cols="4"
                     >
                         <v-card height="200"></v-card>
                     </v-col>

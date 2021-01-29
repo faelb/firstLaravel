@@ -11,6 +11,13 @@ const mix = require('laravel-mix');
  |
  */
 
+mix.alias({
+    '@': 'resources/js',
+    '~': 'resources/sass',
+    '@components': '/resources/js/components',
+});
+
+
 mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
         //

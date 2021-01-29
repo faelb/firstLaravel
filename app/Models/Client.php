@@ -14,7 +14,7 @@ class Client extends Model
     ];
 
 public function Testdata(){
-    return $this->belongsToMany(Testdata::class);
+    return $this->belongsTo(Testdata::class);
 }
 
 }
