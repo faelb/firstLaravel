@@ -16,7 +16,7 @@
 
             <v-spacer></v-spacer>
 
-            <v-btn icon>
+            <v-btn icon @click="switchToForm()">
                 <v-icon>mdi-dots-vertical</v-icon>
             </v-btn>
 
@@ -25,7 +25,37 @@
         </v-app-bar>
 
         <v-main>
-            <v-container>
+            <v-container id="loginContainer" v-if="state==='login'">
+                <v-card
+                class="mx-auto"
+                width="400">
+                    <v-card-title primary-title>
+                        <h1>Login</h1>
+                    </v-card-title>
+                    <v-card-text>
+                    <v-form>
+                        <v-text-field
+                            label="Username"
+                            prepend-icon="mdi-account-circle"/>
+                        <v-text-field
+                            :type="showPassword ? 'text' : 'password'"
+                            label="Password"
+                            prepend-icon="mdi-lock"
+                            :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
+                            @click:append="showPassword = !showPassword"
+                        />
+                    </v-form>
+                    </v-card-text>
+                    <v-card-actions>
+                        <v-btn color="success">Register</v-btn>
+                        <v-spacer></v-spacer>
+                        <v-btn color="info">Login</v-btn>
+                    </v-card-actions>
+                </v-card>
+
+            </v-container>
+
+            <v-container id="menuContainer" v-if="state==='menu'">
                 <v-row>
                     <v-col :cols="6">
                         <v-card
@@ -170,7 +200,25 @@
 
 <script>
 export default {
-    name: "App"
+    name: "App",
+    data() {
+        return {
+            state: "login",
+            name: "",
+            password: "",
+            showPassword: false
+        }
+    },
+    methods: {
+        switchToForm(){
+            if(this.state === "login"){
+                this.state = "menu"
+            }else{
+                this.state = "login"
+            }
+
+        }
+    }
 }
 </script>
 
