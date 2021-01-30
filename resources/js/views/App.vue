@@ -26,6 +26,8 @@
 
         <v-main>
             <v-container id="loginContainer" v-if="state==='login'">
+                <v-row>
+                    <v-col :cols="12">
                 <v-card
                 class="mx-auto"
                 width="400">
@@ -52,13 +54,21 @@
                         <v-btn color="info">Login</v-btn>
                     </v-card-actions>
                 </v-card>
+                    </v-col>
+                </v-row>
 
             </v-container>
 
             <v-container id="menuContainer" v-if="state==='menu'">
                 <v-row>
                     <v-col :cols="6">
+                        <v-hover
+                            close-delay="200"
+                            v-slot="{ hover }"
+                        >
                         <v-card
+                            :elevation="hover ? 16 : 2"
+                            :class="{ 'on-hover': hover }"
                             class="mx-auto"
                             max-width="400">
                             <v-img
@@ -91,9 +101,16 @@
 
                             </v-card-actions>
                         </v-card>
+                        </v-hover>
                     </v-col>
                     <v-col :cols="6">
+                        <v-hover
+                            close-delay="200"
+                            v-slot="{ hover }"
+                        >
                         <v-card
+                            :elevation="hover ? 16 : 2"
+                            :class="{ 'on-hover': hover }"
                             class="mx-auto"
                             max-width="400">
                             <v-img
@@ -124,9 +141,16 @@
 
                             </v-card-actions>
                         </v-card>
+                        </v-hover>
                     </v-col>
                     <v-col :cols="6">
+                        <v-hover
+                            close-delay="200"
+                            v-slot="{ hover }"
+                        >
                         <v-card
+                            :elevation="hover ? 16 : 2"
+                            :class="{ 'on-hover': hover }"
                             class="mx-auto"
                             max-width="400">
                             <v-img
@@ -157,9 +181,16 @@
 
                             </v-card-actions>
                         </v-card>
+                        </v-hover>
                     </v-col>
                     <v-col :cols="6">
+                        <v-hover
+                            close-delay="200"
+                            v-slot="{ hover }"
+                        >
                         <v-card
+                            :elevation="hover ? 16 : 2"
+                            :class="{ 'on-hover': hover }"
                             class="mx-auto"
                             max-width="400">
                             <v-img
@@ -190,6 +221,7 @@
 
                             </v-card-actions>
                         </v-card>
+                        </v-hover>
                     </v-col>
 
                 </v-row>
@@ -223,5 +255,12 @@ export default {
 </script>
 
 <style scoped>
+.v-card {
+    transition: opacity .4s ease-in-out;
+}
+
+.v-card:not(.on-hover) {
+    opacity: 0.6;
+}
 
 </style>
