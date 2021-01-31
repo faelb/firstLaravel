@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 //route geregelt über PageController
 Route::get('/','App\Http\Controllers\PageController@index');
 
+
 //Route::get('/testdatas','App\Http\Controllers\TestdataController@index');
 
 //Route::get('/', function () {

@@ -18,8 +18,8 @@ class CreateTestdatasTable extends Migration
             $table->timestamps();
             $table->integer('msisdn');
             $table->string('customername',50);
-            /*$table->bigInteger('client_id')->unsigned();
-            $table->foreign('client_id')->references('id')->on('clients');*/
+            $table->bigInteger('client_id')->unsigned();
+            $table->foreign('client_id')->references('id')->on('clients');
         });
     }
 

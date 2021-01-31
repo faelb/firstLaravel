@@ -13,9 +13,9 @@ class Testdata extends Model
         'msisdn', 'customername'
     ];
 
-/*   public function Clients() {
-        return $this->hasMany(Client::class);
-    }*/
+   public function Clients() {
+        return $this->belongsTo(Client::class,'client_id');
+    }
 
 
 }
