@@ -35,7 +35,7 @@ class TestdataController extends Controller
 
 
 
-    public function withRelations(){
+    public function testdataWithRelations(){
         $testdata = Testdata::with('Clients')->get();
         return response($testdata, 200);
     }

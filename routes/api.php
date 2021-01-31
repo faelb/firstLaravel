@@ -19,6 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('allTestdata','App\Http\Controllers\TestdataController@index');
-Route::get('withRelations','App\Http\Controllers\TestdataController@withRelations');
+Route::get('testdataWithRelations','App\Http\Controllers\TestdataController@testdataWithRelations');
+Route::get('clientWithRelations','App\Http\Controllers\ClientController@clientWithRelations');
 Route::get('getById/{id}','App\Http\Controllers\TestdataController@getById');
 Route::post('createTestdata','App\Http\Controllers\TestdataController@createTestdata');

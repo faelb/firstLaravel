@@ -13,8 +13,9 @@ class Client extends Model
         'name'
     ];
 
-/*public function Testdata(){
-    return $this->hasMany(Testdata::class);
-}*/
+    public function Testdatas()
+    {
+        return $this->hasMany(Testdata::class);
+    }
 
 }
