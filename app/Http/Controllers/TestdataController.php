@@ -24,12 +24,13 @@ class TestdataController extends Controller
             'customername'=>'required',
             'created_at'=>'',
             'updated_at'=>'',
-            'msisdn'=>'required'
+            'msisdn'=>'required',
+            'client_id'
         ]);
 
         $t = Testdata::create($data);
 
-        return response($t,200);
+        return response($t + "created",200);
 
     }
 

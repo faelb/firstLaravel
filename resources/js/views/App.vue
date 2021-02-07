@@ -53,8 +53,33 @@
                         <v-spacer></v-spacer>
                         <v-btn color="info">Login</v-btn>
                     </v-card-actions>
-                </v-card>
+                </v-card
+                >
                     </v-col>
+<!--                    <v-col>
+                        <v-card
+                            class="mx-auto"
+                            width="400">
+                            <v-card-title>
+                                <h1>create Testcase</h1>
+                            </v-card-title>
+                            <v-card-text>
+                                <v-form>
+                                    <v-text-field
+                                        label="Customername"
+                                    />
+                                    <v-text-field
+                                        label="MSISDN"
+                                    />
+
+
+                                </v-form>
+                            </v-card-text>
+                            <v-card-actions>
+                                <v-btn color="success">Create</v-btn>
+                            </v-card-actions>
+                        </v-card>
+                    </v-col>-->
                 </v-row>
 
             </v-container>
@@ -67,6 +92,7 @@
                             v-slot="{ hover }"
                         >
                         <v-card
+                            id="hover"
                             :elevation="hover ? 16 : 2"
                             :class="{ 'on-hover': hover }"
                             class="mx-auto"
@@ -109,6 +135,7 @@
                             v-slot="{ hover }"
                         >
                         <v-card
+                            id="hover"
                             :elevation="hover ? 16 : 2"
                             :class="{ 'on-hover': hover }"
                             class="mx-auto"
@@ -149,6 +176,7 @@
                             v-slot="{ hover }"
                         >
                         <v-card
+                            id="hover"
                             :elevation="hover ? 16 : 2"
                             :class="{ 'on-hover': hover }"
                             class="mx-auto"
@@ -189,6 +217,7 @@
                             v-slot="{ hover }"
                         >
                         <v-card
+                            id="hover"
                             :elevation="hover ? 16 : 2"
                             :class="{ 'on-hover': hover }"
                             class="mx-auto"
@@ -255,11 +284,11 @@ export default {
 </script>
 
 <style scoped>
-.v-card {
+#hover {
     transition: opacity .4s ease-in-out;
 }
 
-.v-card:not(.on-hover) {
+#hover:not(.on-hover) {
     opacity: 0.6;
 }
 

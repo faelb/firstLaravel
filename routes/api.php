@@ -22,4 +22,5 @@ Route::get('allTestdata','App\Http\Controllers\TestdataController@index');
 Route::get('testdataWithRelations','App\Http\Controllers\TestdataController@testdataWithRelations');
 Route::get('clientWithRelations','App\Http\Controllers\ClientController@clientWithRelations');
 Route::get('getById/{id}','App\Http\Controllers\TestdataController@getById');
+
 Route::post('createTestdata','App\Http\Controllers\TestdataController@createTestdata');
